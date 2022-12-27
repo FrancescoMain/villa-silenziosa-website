@@ -1,5 +1,6 @@
 <script >
 import NavBar from './components/NavBar.vue'
+import Main from './components/Main.vue'
 
 
 export default {
@@ -7,6 +8,7 @@ export default {
   name: "App",
   components: {
     NavBar,
+    Main
 
 
   }
@@ -18,6 +20,8 @@ export default {
 <template>
   <!-- header  -->
   <NavBar />
+  <!-- Main  -->
+  <Main />
 
 
 </template>
