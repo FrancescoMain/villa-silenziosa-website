@@ -32,7 +32,6 @@ export default {
         <div class="wrap-left">
           <!-- bottone menu  -->
           <div class="menu-link">
-            <button>MENU</button>
             <font-awesome-icon icon="fa-solid fa-grip-lines" />
           </div>
 
@@ -107,8 +106,8 @@ header {
         cursor: pointer;
         color: $col-3;
         height: 80px;
+        font-size: 2rem;
 
-        &:hover button,
         &:hover {
           color: $col-2;
           transition: 0.15s linear;
@@ -143,10 +142,13 @@ header {
 
           a {
             color: $col-3;
+            margin: 4px 0;
 
             &:hover {
               color: $col-2;
               transition: 0.15s linear;
+
+
             }
 
           }
@@ -211,7 +213,7 @@ header {
       }
 
       .fa-grip-lines {
-        font-size: 1.4rem;
+        font-size: 2rem;
         display: none;
       }
     }
