@@ -1,11 +1,4 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
+<script >
 </script>
 
 <template>
@@ -14,9 +7,13 @@ const count = ref(0)
       <div class="flex-block">
         <div class="wrap-left">
           <!-- bottone menu  -->
-          <a href="#">MENU</a>
+          <a class="menu-link" href="#">MENU</a>
           <!-- TITOLO  -->
           <h2>VILLA SILENZIOSA</h2>
+          <div class="dropdown">
+            <a class="dropdown-lang" href="">ITA</a>
+            <font-awesome-icon icon="fa-solid fa-angle-down" />
+          </div>
         </div>
         <div class="wrap-right">
           <!-- LINGUA DESKTOP  -->
@@ -30,7 +27,7 @@ const count = ref(0)
           <!-- BOTTONE CONTATTO  -->
           <div class="bottone">RICHIEDI UN PREVENTIVO</div>
           <!-- LINK SOCIAL  -->
-          <ul>
+          <ul class="social">
             <li>
               <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-instagram" /></a>
             </li>
@@ -38,16 +35,11 @@ const count = ref(0)
               <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-facebook-f" /></a>
             </li>
           </ul>
+          <font-awesome-icon icon="fa-solid fa-grip-lines" />
         </div>
-
-
       </div>
     </div>
-
-
-
   </header>
-
 </template>
 
 <style lang="scss" scoped>
@@ -72,11 +64,14 @@ header {
     justify-content: space-between;
     height: 100%;
 
-
     .wrap-left {
       display: flex;
       align-items: center;
       gap: 50px;
+
+      .dropdown {
+        display: none;
+      }
     }
 
     .wrap-right {
@@ -84,13 +79,9 @@ header {
       align-items: center;
       gap: 50px;
 
-
       ul {
         display: flex;
         list-style: none;
-
-
-
 
         li {
           padding: 0 20px;
@@ -117,8 +108,11 @@ header {
         cursor: pointer;
       }
 
+      .fa-grip-lines {
+        font-size: 1.4rem;
+        display: none;
+      }
     }
-
   }
 }
 
@@ -128,19 +122,63 @@ header {
   }
 
   header {
-
     .container {
       width: 98%;
+
+      .flex-block {
+        .wrap-left {
+          .dropdown {
+            cursor: pointer;
+            display: block;
+
+            .dropdown-lang {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
     }
   }
+}
 
-  // h2,
-  // .bottone {
-  //   font-size: 0.8rem;
-  // }
+@media all and (max-width: 900px) {
+  header {
+    .flex-block {
+      .wrap-left {
+        .menu-link {
+          display: none;
+        }
 
-  //   a {
-  //     font-size: 0.7rem;
-  //   }
+        h2 {
+          font-size: 1rem;
+          margin-left: 20px;
+        }
+
+        .dropdown {
+          position: relative;
+          right: 20px;
+        }
+      }
+
+      .wrap-right {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .bottone {
+          display: none;
+        }
+
+        .social {
+          display: none;
+        }
+
+        .fa-grip-lines {
+          display: block;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
 }
 </style>
