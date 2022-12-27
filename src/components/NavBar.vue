@@ -10,32 +10,40 @@ const count = ref(0)
 
 <template>
   <header>
+    <div class="container">
+      <div class="flex-block">
+        <div class="wrap-left">
+          <!-- bottone menu  -->
+          <a href="#">MENU</a>
+          <!-- TITOLO  -->
+          <h2>VILLA SILENZIOSA</h2>
+        </div>
+        <div class="wrap-right">
+          <!-- LINGUA DESKTOP  -->
+          <div class="none">
+            <ul>
+              <li><a href="">ITA</a></li>
+              <li><a href="">ENG</a></li>
+              <li><a href="">DET</a></li>
+            </ul>
+          </div>
+          <!-- BOTTONE CONTATTO  -->
+          <div class="bottone">RICHIEDI UN PREVENTIVO</div>
+          <!-- LINK SOCIAL  -->
+          <ul>
+            <li>
+              <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-instagram" /></a>
+            </li>
+            <li>
+              <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-facebook-f" /></a>
+            </li>
+          </ul>
+        </div>
 
-    <div class="flex-block">
-      <div class="wrap-left">
-        <a href="#">MENU</a>
-        <h3>VILLA SILENZIOSA</h3>
+
       </div>
-      <div class="wrap-right">
-
-        <ul>
-          <li><a href="">ITA</a></li>
-          <li><a href="">ENG</a></li>
-          <li><a href="">DET</a></li>
-        </ul>
-        <div class="bottone">RICHIEDI UN PREVENTIVO</div>
-        <ul>
-          <li>
-            <a href=""><font-awesome-icon icon="fa-brands fa-instagram" /></a>
-          </li>
-          <li>
-            <a href=""><font-awesome-icon icon="fa-brands fa-facebook-f" /></a>
-          </li>
-        </ul>
-      </div>
-
-
     </div>
+
 
 
   </header>
@@ -44,6 +52,13 @@ const count = ref(0)
 
 <style lang="scss" scoped>
 header {
+  justify-content: center;
+  display: flex;
+
+  .container {
+    width: 90%;
+  }
+
   position: fixed;
   height: 124px;
   width: 100%;
@@ -57,27 +72,23 @@ header {
     justify-content: space-between;
     height: 100%;
 
+
     .wrap-left {
       display: flex;
-      margin-left: 90px;
       align-items: center;
-
-      h3 {
-        margin-left: 120px;
-        font-size: 1.5rem;
-      }
-
+      gap: 50px;
     }
 
     .wrap-right {
       display: flex;
-      margin-left: 90px;
       align-items: center;
+      gap: 50px;
+
 
       ul {
         display: flex;
         list-style: none;
-        margin-right: 120px;
+
 
 
 
@@ -87,6 +98,10 @@ header {
 
           &:last-child {
             border: none;
+          }
+
+          .icon {
+            font-size: 1.2rem;
           }
         }
       }
@@ -98,7 +113,6 @@ header {
         justify-content: center;
         align-items: center;
         border: 1px solid #fff;
-        margin-right: 120px;
         padding: 0 20px;
         cursor: pointer;
       }
@@ -106,5 +120,27 @@ header {
     }
 
   }
+}
+
+@media all and (max-width: 1250px) {
+  .none {
+    display: none;
+  }
+
+  header {
+
+    .container {
+      width: 98%;
+    }
+  }
+
+  // h2,
+  // .bottone {
+  //   font-size: 0.8rem;
+  // }
+
+  //   a {
+  //     font-size: 0.7rem;
+  //   }
 }
 </style>
