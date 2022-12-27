@@ -9,12 +9,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneFlip, faAngleDown, faGripLines } from '@fortawesome/free-solid-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faPhoneFlip, faFacebookF, faInstagram, faPaperPlane)
+library.add(faPhoneFlip, faAngleDown, faFacebookF, faInstagram, faPaperPlane, faGripLines)
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
