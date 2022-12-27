@@ -76,17 +76,17 @@ export default {
 header {
   justify-content: center;
   display: flex;
-
-  .container {
-    width: 90%;
-  }
-
   position: fixed;
   height: 124px;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 2;
+  background-color: $bg-1;
+
+  .container {
+    width: 90%;
+  }
 
   .flex-block {
     display: flex;
