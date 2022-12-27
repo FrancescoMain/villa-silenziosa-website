@@ -1,4 +1,28 @@
 <script >
+import { store } from "../store.js";
+
+
+export default {
+
+  name: "NavBar",
+
+  data() {
+    return {
+      store,
+      dropdown: false
+    }
+  },
+  methods: {
+    dropdownChange() {
+      if (this.dropdown) {
+        this.dropdown = false;
+      } else {
+        this.dropdown = true;
+      }
+    }
+  }
+
+}
 </script>
 
 <template>
@@ -7,32 +31,37 @@
       <div class="flex-block">
         <div class="wrap-left">
           <!-- bottone menu  -->
-          <a class="menu-link" href="#">MENU</a>
+          <div class="menu-link">
+            <button>MENU</button>
+            <font-awesome-icon icon="fa-solid fa-grip-lines" />
+          </div>
+
           <!-- TITOLO  -->
           <h2>VILLA SILENZIOSA</h2>
-          <div class="dropdown">
-            <a class="dropdown-lang" href="">ITA</a>
+          <div class="dropdown" @click="dropdownChange()" @mouseleave="dropdown = false">
+            <button class="dropdown-lang">LINGUA</button>
             <font-awesome-icon icon="fa-solid fa-angle-down" />
+            <div v-if="dropdown" class="down">
+              <a v-for="lang in store.languages" :key="lang.name" :href="lang.link">{{ lang.name }}
+              </a>
+            </div>
           </div>
         </div>
         <div class="wrap-right">
           <!-- LINGUA DESKTOP  -->
           <div class="none">
             <ul>
-              <li><a href="">ITA</a></li>
-              <li><a href="">ENG</a></li>
-              <li><a href="">DET</a></li>
+              <li v-for="lang in store.languages" :key="lang.name">
+                <a :href="lang.link">{{ lang.name }}</a>
+              </li>
             </ul>
           </div>
           <!-- BOTTONE CONTATTO  -->
           <div class="bottone">RICHIEDI UN PREVENTIVO</div>
           <!-- LINK SOCIAL  -->
           <ul class="social">
-            <li>
-              <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-instagram" /></a>
-            </li>
-            <li>
-              <a class="icon" href=""><font-awesome-icon icon="fa-brands fa-facebook-f" /></a>
+            <li v-for="social in store.socials" :key="social.name">
+              <a class="icon" :href="social.link"><font-awesome-icon :icon="social.icon" /></a>
             </li>
           </ul>
           <font-awesome-icon icon="fa-solid fa-grip-lines" />
@@ -71,8 +100,62 @@ header {
       align-items: center;
       gap: 50px;
 
+
+      .menu-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: $col-3;
+        height: 80px;
+
+        &:hover button,
+        &:hover {
+          color: $col-2;
+          transition: 0.15s linear;
+        }
+
+
+        button {
+          cursor: pointer;
+          color: $col-3;
+        }
+
+        .fa-grip-lines {
+          margin-left: 10px;
+        }
+      }
+
       .dropdown {
         display: none;
+        color: $col-3;
+
+        &:hover button,
+        &:hover {
+          color: $col-2;
+          transition: 0.15s linear;
+        }
+
+        .down {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 70px;
+
+          a {
+            color: $col-3;
+
+            &:hover {
+              color: $col-2;
+              transition: 0.15s linear;
+            }
+
+          }
+        }
+
+        button {
+          color: $col-3;
+
+        }
       }
     }
 
@@ -90,17 +173,18 @@ header {
           border-right: 2px solid;
           color: $col-3;
 
+          &:hover a,
+          &:hover {
+            color: $col-2;
+            transition: 0.15s linear;
+          }
+
           &:last-child {
             border: none;
           }
 
           a {
             color: $col-3;
-
-            &:hover {
-              color: $col-2;
-              transition: 0.15s linear;
-            }
           }
 
           .icon {
@@ -194,6 +278,13 @@ header {
         .fa-grip-lines {
           display: block;
           margin-right: 20px;
+          color: $col-3;
+          cursor: pointer;
+
+          &:hover {
+            color: $col-2;
+            transition: 0.15s linear;
+          }
         }
       }
     }
