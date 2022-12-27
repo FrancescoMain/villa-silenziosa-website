@@ -43,6 +43,8 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../../src/styles/partials/variables.scss" as *;
+
 header {
   justify-content: center;
   display: flex;
@@ -86,9 +88,19 @@ header {
         li {
           padding: 0 20px;
           border-right: 2px solid;
+          color: $col-3;
 
           &:last-child {
             border: none;
+          }
+
+          a {
+            color: $col-3;
+
+            &:hover {
+              color: $col-2;
+              transition: 0.15s linear;
+            }
           }
 
           .icon {
@@ -103,9 +115,15 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #fff;
+        border: 1px solid $col-3;
         padding: 0 20px;
         cursor: pointer;
+
+        &:hover {
+          background-color: $bg-2;
+          color: $col-1;
+          transition: 0.2s linear;
+        }
       }
 
       .fa-grip-lines {
