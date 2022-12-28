@@ -40,7 +40,7 @@ export default {
         <div  v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
             <img class="animate__animated  animate__fadeIn" :src="img.scr" :alt="img.name">
         </div>
-        <h1>VILLA <br> SILENZIOSA</h1>
+        <h1 class="animate__animated  animate__fadeInLeft">VILLA <br> SILENZIOSA</h1>
     </div>
 </template>
 
@@ -61,6 +61,10 @@ export default {
     }
     .animate__animated.animate__fadeIn {
         --animate-duration: 2s;
+      }
+
+      .animate__animated.animate__fadeLeft {
+        transition-delay: 5s;
       }
     
 
