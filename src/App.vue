@@ -1,6 +1,7 @@
 <script >
 import NavBar from './components/NavBar.vue'
 import Main from './components/Main.vue'
+import Section from './components/Section.vue'
 
 
 export default {
@@ -8,7 +9,8 @@ export default {
   name: "App",
   components: {
     NavBar,
-    Main
+    Main,
+    Section,
 
 
   }
@@ -22,6 +24,7 @@ export default {
   <NavBar />
   <!-- Main  -->
   <Main />
+  <Section />
 
 
 </template>
