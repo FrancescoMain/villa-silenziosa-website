@@ -40,7 +40,12 @@ export default {
         <div class="container-img" v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
             <img class="animate__animated  animate__fadeIn" :src="img.scr" :alt="img.name">
         </div>
-        <h1 class="animate__animated  animate__fadeInLeft">VILLA <br> SILENZIOSA</h1>
+        <div class="title">
+            <h1 class="animate__animated  animate__fadeInLeft">VILLA <br> SILENZIOSA</h1>
+            <h3 class="animate__animated  animate__fadeInLeft">TRASCORRI LE TUE NOTTI NEL CUORE DEL CILENTO, A DUE PASSI
+                DAL MARE. </h3>
+        </div>
+
     </div>
 </template>
 
@@ -48,8 +53,8 @@ export default {
 @use "../styles/partials/variables.scss" as *;
 
 .container {
-    padding-top: 140px;
-    height: 945px;
+    padding-top: 124px;
+    height: 875px;
     display: flex;
     justify-content: end;
 
@@ -58,37 +63,37 @@ export default {
         width: 80%;
 
         img {
-            filter: grayscale(0.7);
+            filter: contrast(70%);
             position: absolute;
-            height: 820px;
+            height: 100%;
             width: 100%;
             right: 0;
         }
     }
-
-
-
 
     .animate__animated.animate__fadeIn {
         --animate-duration: 2s;
         transition-delay: 5s;
     }
 
-    h1 {
-        font-size: 8rem;
+    .title {
         position: absolute;
-        left: 150px;
-        top: 300px;
+        left: 250px;
+        top: 250px;
+
+        h1 {
+            font-size: 8rem;
+            margin-bottom: 75px;
+        }
     }
+
 }
 
 @media all and (max-width: 1250px) {
 
 
     .container {
-        h1 {
-            left: 24px;
-        }
+        h1 {}
 
         .container-img {
             img {
