@@ -89,11 +89,39 @@ export default {
 
 }
 
+@media all and (max-width: 1440px) {
+
+
+
+    .container {
+        .container-img {
+            width: 72%;
+        }
+
+        .title {
+
+            top: 300px;
+
+            h1 {
+                font-size: 6.5rem;
+                margin-bottom: 30px;
+
+            }
+        }
+    }
+}
+
 @media all and (max-width: 1250px) {
 
 
     .container {
-        h1 {}
+        height: 780px;
+
+        .title {
+            top: 240px;
+            left: 80px;
+        }
+
 
         .container-img {
             img {
@@ -101,22 +129,47 @@ export default {
             }
         }
     }
+}
 
-    @media all and (max-width: 900px) {
-        .container {
+@media all and (max-width: 900px) {
+    .container {
+        height: 825px;
+
+        .container-img {
+            width: 80%;
+        }
+
+        .title {
+            top: 270px;
+            left: 40px;
+
             h1 {
-                font-size: 4.3rem;
-                width: 100%;
+                font-size: 4rem;
+
+            }
+
+            h3 {
+                font-size: 1rem;
             }
         }
 
+
     }
 
-    @media all and (max-width: 450px) {
-        .container {
+}
+
+
+@media all and (max-width: 450px) {
+    .container {
+        .title {
             h1 {
-                font-size: 3rem;
-                width: 100%;
+                font-size: 2rem;
+
+            }
+
+            h3 {
+                font-size: 0.8rem;
+                width: 80%;
             }
         }
 
