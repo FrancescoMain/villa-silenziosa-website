@@ -2,7 +2,7 @@
 import NavBar from './components/NavBar.vue'
 import Main from './components/Main.vue'
 import Section from './components/Section.vue'
-
+import "@fontsource/alegreya-sans";
 
 export default {
 
