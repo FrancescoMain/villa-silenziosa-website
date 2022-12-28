@@ -80,8 +80,19 @@ export default {
     }
 }
 
-@media all and (max-width: 1250px) {}
+@media all and (max-width: 1250px) {
+    img {
+        filter: grayscale(1);
+        height: 820px;
+        width: 800px;
 
+    }
+   
+}
+
+@media all and (max-width: 1000px) {
+   
+}
 
 @media all and (max-width: 900px) {}
 </style>
