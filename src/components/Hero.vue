@@ -1,5 +1,8 @@
 <script >
-import { objectToString } from '@vue/shared'
+import { objectToString } from '@vue/shared';
+import 'animate.css';
+
+
 
 
 
@@ -34,8 +37,8 @@ export default {
 
 <template>
     <div class="container">
-        <div v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
-            <img :src="img.scr" :alt="img.name">
+        <div  v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
+            <img class="animate__animated  animate__fadeOut" :src="img.scr" :alt="img.name">
         </div>
         <h1>VILLA <br> SILENZIOSA</h1>
     </div>
@@ -56,6 +59,7 @@ export default {
         max-width: 1090px;
 
     }
+    
 
 
 
