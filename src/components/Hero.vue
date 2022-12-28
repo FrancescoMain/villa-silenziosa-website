@@ -37,7 +37,7 @@ export default {
 
 <template>
     <div class="container">
-        <div v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
+        <div class="container-img" v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
             <img class="animate__animated  animate__fadeIn" :src="img.scr" :alt="img.name">
         </div>
         <h1 class="animate__animated  animate__fadeInLeft">VILLA <br> SILENZIOSA</h1>
@@ -53,11 +53,19 @@ export default {
     display: flex;
     justify-content: end;
 
-    img {
-        filter: grayscale(0.7);
-        max-height: 820px;
-        max-width: 1090px;
+    .container-img {
+        position: relative;
+        width: 80%;
+
+        img {
+            filter: grayscale(0.7);
+            position: absolute;
+            height: 820px;
+            width: 100%;
+            right: 0;
+        }
     }
+
 
 
 
@@ -81,29 +89,33 @@ export default {
         h1 {
             left: 24px;
         }
-    }
-}
 
-
-@media all and (max-width: 900px) {
-    .container {
-        h1 {
-            font-size: 4.5rem;
-            text-align: center;
-            width: 100%;
-            left: 0px;
+        .container-img {
+            img {
+                object-fit: cover;
+            }
         }
     }
-}
 
-@media all and (max-width: 450px) {
-    .container {
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-            width: 100%;
-            left: 0px;
+    @media all and (max-width: 900px) {
+        .container {
+            h1 {
+                font-size: 4.3rem;
+                width: 100%;
+            }
         }
+
     }
+
+    @media all and (max-width: 450px) {
+        .container {
+            h1 {
+                font-size: 3rem;
+                width: 100%;
+            }
+        }
+
+    }
+
 }
 </style>
