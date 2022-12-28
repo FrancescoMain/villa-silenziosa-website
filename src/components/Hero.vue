@@ -38,7 +38,7 @@ export default {
 <template>
     <div class="container">
         <div  v-for="img in data.heroImgs" :key="img.name" v-show="img.id === activeItem">
-            <img class="animate__animated  animate__fadeOut" :src="img.scr" :alt="img.name">
+            <img class="animate__animated  animate__fadeIn" :src="img.scr" :alt="img.name">
         </div>
         <h1>VILLA <br> SILENZIOSA</h1>
     </div>
@@ -59,6 +59,9 @@ export default {
         max-width: 1090px;
 
     }
+    .animate__animated.animate__fadeIn {
+        --animate-duration: 2s;
+      }
     
 
 
