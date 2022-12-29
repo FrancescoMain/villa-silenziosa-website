@@ -1,13 +1,15 @@
 <script >
 import { store } from "../store.js";
-import Hero from './hero.vue'
+import Section from './Section.vue'
+import Hero from './Hero.vue'
 
 
 export default {
 
     name: "Main",
     components: {
-        Hero
+        Hero,
+        Section
 
 
     },
@@ -23,6 +25,7 @@ export default {
 <template>
     <main>
         <Hero :data="store" />
+        <Section :data="store" />
     </main>
 </template>
 
