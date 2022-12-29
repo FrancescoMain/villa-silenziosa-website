@@ -1,6 +1,7 @@
 @use "./partials/variables.scss" as *;
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@
 body {
     background-color: $bg-1;
     color: $col-2;
-    font-family: "Alegreya Sans";
+    font-family: "Cormorant Garamond";
 }
 
 a {

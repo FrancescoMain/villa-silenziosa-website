@@ -13,6 +13,8 @@ import { faPhoneFlip, faAngleDown, faGripLines } from '@fortawesome/free-solid-s
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
+import "@fontsource/cormorant-garamond";
+
 /* add icons to the library */
 library.add(faPhoneFlip, faAngleDown, faFacebookF, faInstagram, faPaperPlane, faGripLines)
 
