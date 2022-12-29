@@ -49,4 +49,6 @@ export const store = reactive({
         },
 
     ],
+
+    imgSection: "../../public/img/casalvelino.jpg"
 });
