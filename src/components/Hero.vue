@@ -111,16 +111,22 @@ export default {
         padding: 0 20px;
         cursor: pointer;
 
-        &:hover {
-            background-color: $bg-2;
-            color: $col-1;
-            transition: 0.2s linear;
+        a {
+            background-color: $bg-1;
         }
 
-        a:hover {
+        &:hover a,
+        &:hover {
+
             color: $col-1;
             transition: 0.2s linear;
+            background-color: $bg-2;
         }
+
+
+
+
+
     }
 
 }

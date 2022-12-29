@@ -207,16 +207,18 @@ header {
         padding: 0 20px;
         cursor: pointer;
 
+        &:hover a,
         &:hover {
-          background-color: $bg-2;
+
           color: $col-1;
           transition: 0.2s linear;
         }
 
-        a:hover {
-          color: $col-1;
-          transition: 0.2s linear;
+        &:hover {
+          background-color: $bg-2;
         }
+
+
       }
 
       .fa-grip-lines {
