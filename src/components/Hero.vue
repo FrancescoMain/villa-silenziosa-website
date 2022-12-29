@@ -42,8 +42,15 @@ export default {
         </div>
         <div class="title">
             <h1 class="animate__animated  animate__fadeInLeft">VILLA <br> SILENZIOSA</h1>
-            <h3 class="animate__animated  animate__fadeInLeft">TRASCORRI LE TUE NOTTI NEL CUORE DEL CILENTO, A DUE PASSI
-                DAL MARE. </h3>
+            <h3 class="animate__animated  animate__fadeInLeft">
+                TRASCORRI LE TUE NOTTI NEL CUORE DEL CILENTO, A DUE PASSI
+                DAL MARE.
+            </h3>
+        </div>
+        <div class="but animate__animated  animate__fadeIn">
+
+            Guarda Le Nostre Stanze
+
         </div>
 
     </div>
@@ -54,7 +61,7 @@ export default {
 
 .container {
     padding-top: 124px;
-    height: 875px;
+    height: 970px;
     display: flex;
     justify-content: end;
 
@@ -84,6 +91,30 @@ export default {
         h1 {
             font-size: 8rem;
             margin-bottom: 75px;
+        }
+
+
+    }
+
+    .but {
+        position: absolute;
+        background-color: $bg-1;
+        right: 200px;
+        bottom: 80px;
+        font-size: 1.6rem;
+        height: 60px;
+        min-width: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $col-3;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $bg-2;
+            color: $col-1;
+            transition: 0.2s linear;
         }
     }
 
@@ -128,6 +159,10 @@ export default {
                 object-fit: cover;
             }
         }
+
+        .but {
+            bottom: 150px;
+        }
     }
 }
 
@@ -153,6 +188,10 @@ export default {
             }
         }
 
+        .but {
+            left: 40px;
+            text-align: center;
+        }
 
     }
 
