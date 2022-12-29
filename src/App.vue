@@ -2,7 +2,8 @@
 import NavBar from './components/NavBar.vue'
 import Main from './components/Main.vue'
 import Section from './components/Section.vue'
-import "@fontsource/alegreya-sans";
+import "@fontsource/cormorant-garamond";
+
 
 export default {
 
