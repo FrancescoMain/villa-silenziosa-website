@@ -5,7 +5,9 @@ import { store } from "../store.js";
 export default {
 
   name: "NavBar",
-
+  props: {
+    data: Object,
+  },
   data() {
     return {
       store,
