@@ -47,9 +47,9 @@ export default {
                 DAL MARE.
             </h3>
         </div>
-        <div class="but animate__animated  animate__fadeIn">
+        <div class="but">
 
-            Guarda Le Nostre Stanze
+            <a href="">Guarda Le Nostre Stanze</a>
 
         </div>
 
@@ -113,6 +113,11 @@ export default {
 
         &:hover {
             background-color: $bg-2;
+            color: $col-1;
+            transition: 0.2s linear;
+        }
+
+        a:hover {
             color: $col-1;
             transition: 0.2s linear;
         }

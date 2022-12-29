@@ -56,7 +56,9 @@ export default {
             </ul>
           </div>
           <!-- BOTTONE CONTATTO  -->
-          <div class="bottone">RICHIEDI UN PREVENTIVO</div>
+          <div class="bottone">
+            <a href="">RICHIEDI UN PREVENTIVO</a>
+          </div>
           <!-- LINK SOCIAL  -->
           <ul class="social">
             <li v-for="social in store.socials" :key="social.name">
@@ -207,6 +209,11 @@ header {
 
         &:hover {
           background-color: $bg-2;
+          color: $col-1;
+          transition: 0.2s linear;
+        }
+
+        a:hover {
           color: $col-1;
           transition: 0.2s linear;
         }
